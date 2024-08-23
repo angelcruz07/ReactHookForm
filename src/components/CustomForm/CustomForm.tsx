@@ -10,6 +10,7 @@ const CustomForm = () => {
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
+    mode: "onBlur",
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
